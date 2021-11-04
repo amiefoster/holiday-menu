@@ -2,5 +2,5 @@ class HolidayDish < ApplicationRecord
     belongs_to :dish
     belongs_to :holiday
 
-    validates :dish_id, uniqueness: { scope: [:holiday_id] }
+    validates :holiday_id, uniqueness: { scope: [:dish_id] }
 end
